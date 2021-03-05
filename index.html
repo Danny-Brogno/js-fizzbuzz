@@ -307,21 +307,6 @@
 
            // -------------------EXERCISE 7-------------------------------------
 
-           // Crea un array vuoto.
-           // Chiedi per 6 volte all'utente di inserire un numero,
-           // se è dispari inseriscilo nell'array
-
-           // var dannyArr = [];
-           // for (var i=0; i<6; i++) {
-           //   var valore = parseInt(prompt ("Dammi un numero"));
-           //   var dispari = valore % 2 == 1
-           // }
-           //
-           // if (dispari) {
-           //   dannyArr.push(valore);
-           // }
-           //
-           // console.log(dannyArr, valore);
 
            // ------------------------------------------------------------------
 
@@ -344,18 +329,21 @@
            // ma per i multipli di 3 stampi "Fizz" al posto del numero e per i multipli di 5 stampi Buzz.
            // Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 
+            for (var i = 1; i < 101; i++) { // This formula says the initial value on i is one and is MINOR of 101 (so it will go up to 100) and then i++ makes the cycle move forward i = i + 1
 
-            var numberStamp = Math.floor((Math.random() * 100) + 1);
-            for (var i = 1; i < 101; i++) {
-            if (i % 3 == 0) {
-            console.log("fizz");
-            }else if (i % 5 == 0) {
-            console.log("buzz");
-            }else if ((i % 3 == 0) && (i % 5 == 0)) {
-            console.log("fizzBuzz");
-            }else {
-            console.log(i);
-            }
+              if ((i % 3 == 0) && (i % 5 == 0)) { // For "fizzBuzz" I just put a different formula to select both multiples of 3 and 5
+              console.log("fizzBuzz");
+
+              } else if (i % 5 == 0) { // Same thing for 5.
+              console.log("buzz");
+
+              } else if (i % 3 == 0) { // Here I say that IF i (module) is divided by 3 and it gives no change (so it is a multiple of 3) than it has to stamp fizz in the console.
+              console.log("fizz");
+
+              } else {
+              console.log(i);
+              }
+
             }
 
   </script>
